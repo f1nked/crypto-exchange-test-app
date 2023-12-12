@@ -4,24 +4,9 @@ import { getCurrencies, getMinAmount, getEstimatedAmount } from "services/Servic
 import Input from "components/ui/Input";
 import useUpdateEffect from "hooks/useUpdateEffect";
 import { InputStyled, InputBase, ButtonStyled } from "components/ui/Styles";
+import { ICurrencie } from "components/ui/Input";
 
 import { ReactComponent as Icon } from "components/widget/icons/swap.svg";
-
-interface ICurrencie {
-  ticker: string;
-  name: string;
-  image: string;
-  hasExternalId: boolean;
-  isFiat: boolean;
-  featured: boolean;
-  isStable: boolean;
-  supportsFixedRate: boolean;
-  network: string;
-  tokenContract: null | string;
-  buy: boolean;
-  sell: boolean;
-  legacyTicker: string;
-}
 
 const Widget = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -60,7 +45,6 @@ const Widget = () => {
     legacyTicker: "",
   });
   const [loaded, setLoaded] = useState(false);
-  const [disabledForm, setDisabledForm] = useState(false);
 
   const [error, setError] = useState<null | string>(null);
 

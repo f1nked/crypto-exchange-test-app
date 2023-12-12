@@ -5,7 +5,7 @@ import useOutsideClick from "hooks/useOutsideClick";
 
 import { ReactComponent as IconArrow } from "components/widget/icons/arrow.svg";
 
-interface ICurrencie {
+export interface ICurrencie {
   ticker: string;
   name: string;
   image: string;
